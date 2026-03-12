@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# 🌟 Jesucristo Superstar - Hilo Conductor 2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner del Proyecto](public/og-image.jpg) > Aplicación web interactiva diseñada para presentar las escenas, canciones y lecturas bíblicas del "Hilo Conductor" de la campaña 2026 del centro **Juniors M.D. Endavant**.
 
-Currently, two official plugins are available:
+🌍 **Demo en vivo:** [Añade aquí tu enlace de Vercel/Netlify]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Características Destacadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Esta web está diseñada pensando en la inmersión del usuario y en la facilidad de uso en móviles, simulando la experiencia de tener el "libreto" del director en las manos.
 
-## Expanding the ESLint configuration
+* **🎭 Modal "Libreto" Interactivo:** Una ventana inmersiva a pantalla completa que muestra las letras y lecturas. Incluye bloqueo de scroll de fondo y navegación fluida entre escenas (Anterior/Siguiente).
+* **📖 Tipografía Inteligente (CSS Columns):** Las letras de las canciones largas se dividen automáticamente en columnas (estilo periódico/biblia) en pantallas grandes, mientras que los textos cortos mantienen un formato de bloque único para facilitar la lectura.
+* **🎨 Diseño Temático Retro:** Uso intenso de degradados cálidos (atardecer), fuentes "display" (Bungee) y tipografías manuscritas para darle un toque teatral y musical.
+* **⚡ Animaciones Fluidas:** Tarjetas con efectos `hover` (elevación, escalado y sombras dinámicas) e iconos SVG interactivos.
+* **📱 100% Responsive:** Diseñado con enfoque *Mobile-First*. Las imágenes SVG del Hero hacen un "zoom" inteligente en móviles para destacar la cruz central.
+* **🔍 Optimizado para Compartir (SEO/OG):** Metaetiquetas Open Graph configuradas para que al compartir el enlace por WhatsApp o Redes Sociales aparezca una miniatura y título personalizados.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologías Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **[React](https://reactjs.org/)**: Librería principal para la interfaz de usuario.
+* **[TypeScript](https://www.typescriptlang.org/)**: Tipado estricto para un código más seguro y predecible.
+* **[Vite](https://vitejs.dev/)**: Entorno de desarrollo ultrarrápido.
+* **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework de utilidades CSS para un diseño ágil y a medida.
+* **Iconos SVG**: Personalizados e integrados nativamente para máximo rendimiento.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Estructura del Proyecto (Clean Code)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+El proyecto sigue una arquitectura limpia separando la Vista (Componentes) de los Datos (Información).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+src/
+├── components/          # Componentes visuales de la interfaz
+│   ├── Footer.tsx       # Pie de página y RRSS
+│   ├── Hero.tsx         # Sección principal con fondo SVG
+│   ├── InfoSection.tsx  # Controlador del Grid y del Modal
+│   ├── SceneCard.tsx    # Tarjeta individual de cada escena
+│   └── SceneDetailModal.tsx # Ventana emergente con el libreto
+│
+├── data/                
+│   └── escenasData.ts   # 🗄️ TODA LA INFORMACIÓN (Letras, sinopsis, etc.)
+│
+├── index.css            # Estilos globales y ocultación de scrollbar
+└── main.tsx             # Punto de entrada de la aplicación
