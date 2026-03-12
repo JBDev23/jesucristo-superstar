@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-dvh overflow-hidden">
       
       {/* FONDO (Cielo y sol) */}
       <div className="absolute inset-0 -z-20">
