@@ -66,7 +66,7 @@ export default function SceneDetailModal({
 
         {/* CABECERA (Fija) */}
         <div className="bg-azul-noche px-8 py-8 sm:py-10 text-center shrink-0">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-bungee-shade drop-shadow-md pr-12 sm:pr-0">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl text-white font-bungee-shade drop-shadow-md pr-12 sm:pr-0">
             {sceneTitle}
           </h2>
         </div>
