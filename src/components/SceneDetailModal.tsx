@@ -59,7 +59,7 @@ export default function SceneDetailModal({
           className="absolute top-4 right-4 sm:top-6 sm:right-6 z-10 bg-[#FF6E28] text-white p-2 rounded-full border-4 border-azul-noche hover:scale-110 hover:bg-[#FFD977] hover:text-azul-noche transition-all cursor-pointer shadow-lg"
           aria-label="Cerrar detalle"
         >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+          <svg className="w-[3dvw] h-[3dvw]" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -75,7 +75,7 @@ export default function SceneDetailModal({
           
           {synopsis && (
             <div className="mb-12">
-              <h4 className="text-2xl text-azul-noche font-bold mb-4" style={{ fontFamily: "cursive" }}>
+              <h4 className="text-3xl text-azul-noche font-bold mb-4 font-caveat-brush">
                 Contexto de la escena:
               </h4>
               <p className="text-lg text-gray-800 leading-relaxed font-medium">
@@ -99,7 +99,7 @@ export default function SceneDetailModal({
                     ) : (
                       <svg className="w-6 h-6 text-black shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M10.5 2h3v7h6v3h-6v10h-3V12h-6V9h6V2z" /></svg>
                     )}
-                    <h3 className="text-2xl font-bold text-black" style={{ fontFamily: "cursive" }}>
+                    <h3 className="text-2xl font-bold text-black font-caveat-brush">
                       {item.title}
                     </h3>
                   </div>
@@ -121,8 +121,7 @@ export default function SceneDetailModal({
               {hasPrev && (
                 <button 
                   onClick={onPrev}
-                  className="cursor-pointer flex items-center gap-2 text-azul-noche font-bold text-lg hover:text-[#FF6E28] transition-colors"
-                  style={{ fontFamily: "cursive" }}
+                  className="font-caveat-brush cursor-pointer flex items-center gap-2 text-azul-noche font-bold text-2xl hover:text-[#FF6E28] transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
                   ANTERIOR
@@ -139,8 +138,7 @@ export default function SceneDetailModal({
               {hasNext && (
                 <button 
                   onClick={onNext}
-                  className="cursor-pointer flex items-center gap-2 text-azul-noche font-bold text-lg hover:text-[#FF6E28] transition-colors"
-                  style={{ fontFamily: "cursive" }}
+                  className="font-caveat-brush cursor-pointer flex items-center gap-2 text-azul-noche font-bold text-2xl hover:text-[#FF6E28] transition-colors"
                 >
                   SIGUIENTE
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>

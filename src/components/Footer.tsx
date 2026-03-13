@@ -18,12 +18,11 @@ export default function Footer() {
         {/* LADO DERECHO: Créditos de Juniors MD */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right">
           <p 
-            className="text-2xl mb-1 text-[#fcf6e3]/90 font-bold" 
-            style={{ fontFamily: "cursive" }}
+            className="font-caveat-brush text-2xl mb-1 text-[#fcf6e3]/90 font-bold" 
           >
             Un proyecto creado por
           </p>
-          <h3 className="text-3xl font-bold text-[#116645] tracking-widest mb-6">
+          <h3 className="font-bungee text-3xl font-bold text-[#116645] tracking-widest mb-6">
             JUNIORS M.D. ENDAVANT
           </h3>
           
