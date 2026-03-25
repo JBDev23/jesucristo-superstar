@@ -3,7 +3,11 @@ import SceneCard from "./SceneCard";
 import SceneDetailModal from "./SceneDetailModal";
 import { escenasData } from '../data/scenesData';
 
-export default function InfoSection() {
+interface InfoSectionProps {
+  onPlaySong?: (title: string, src: string) => void;
+}
+
+export default function InfoSection({ onPlaySong }: InfoSectionProps) {
   
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -48,6 +52,7 @@ export default function InfoSection() {
         onPrev={() => isModalOpen && setSelectedIndex(selectedIndex - 1)}
         hasNext={isModalOpen && selectedIndex < escenasData.length - 1}
         onNext={() => isModalOpen && setSelectedIndex(selectedIndex + 1)}
+        onPlaySong={onPlaySong}
       />
     </div>
   );

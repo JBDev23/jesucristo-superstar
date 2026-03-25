@@ -1,4 +1,3 @@
-
 export interface SceneData {
     title: string;
     synopsis: string;
@@ -9,6 +8,7 @@ export interface SceneData {
         type: "song" | "reading";
         colorClass: string;
         content: string;
+        audioSrc?: string; 
     }[];
 }
 
@@ -30,6 +30,7 @@ export const escenasData: SceneData[] = [
                 title: "Canción de Judas",
                 type: "song",
                 colorClass: "bg-[#ff8c00]",
+                audioSrc: "/songs/canción-de-judas.mp3",
                 content: "Mi mente clara está\nPor fin descubrí donde todos vamos a parar\nSi quieres desnudar\nAl hombre de mito verás solo a un hombre quedar\n\n¡Jesús!\nYa empiezas a creer lo que dicen de ti\nYa crees de verdad en tu divinidad\nTodas tus ideas de nada servirán\nPorque solo importa tu personalidad\n\nOye Cristo sé porque te seguí\nY te pido que me escuches a mí\nNo lo olvides\nYo lucho por la libertad\nNo pensé que creerían que eras su nuevo Mesías\nY solo eres un libertador\n\nYo recuerdo cuando todo empezó\nTe llamábamos hombre y no Dios\nY te juro que aun cuentas con mi admiración\nPero a tu revolución todos le dan otra intención\nSi ven el error te matarán\n\nNazaret tu hijo es muy famoso como ves\nLástima que sea tan popular\nSi fuera heredero del padre carpintero\nA nadie asustaría, ni provocaría\n\nOye Cristo no te importa tu pueblo\nNo ves cómo pisotean mi suelo\nEs la ocupación\nY la total humillación\n\nYo temo a la multitud\nEl gritar es su virtud\nSu entusiasmo es nuestra perdición\nPara nuestra revolución\n\nOye Cristo yo te quiero pedir\nQue recuerdes que debemos vivir\nY ahora se que la victoria no es posible\nTus adeptos están ciegos\nSolo piensan en tus cielos\nTe seguí para una gran misión\nY ahora todo es decepción\n\nOye Cristo yo te quiero advertir\nQue recuerdes que debemos vivir\nOye Cristo yo te quiero advertir\nQue recuerdes que debemos vivir\n\n¡Cristo!\nQue me escuches\nQue me escuches a mí\nYo te quiero pedir\n\n¡Cristo!\nQue me escuches\nQue me escuches a mi\n\nNo me quiere escuchar\nNo me quiere escuchar\nNo me quiere escuchar\nNo me quiere escuchar\nNo me quiere escuchar"
             },
             {
@@ -42,6 +43,7 @@ export const escenasData: SceneData[] = [
                 title: "Todo estará en paz",
                 type: "song",
                 colorClass: "bg-[#00d800]",
+                audioSrc: "/songs/todo-estará-en-paz.mp3",
                 content: "[María Magdalena]\nBasta ya de angustias\nDeja los problemas\nOlvida las penas\nYo sé que nada va a pasar\nTodo estará en paz\n\nEsta noche debes descansar\nPues el mundo sin ti seguirá\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nNada va a pasar\nTodo estará en paz\n\nVelaré tu sueño\nCalmaré tu fiebre\nCon ungüento te ungiré\nVerás que nada va a pasar\nTodo estará en paz\n\nPorque el agua apagará tu sed\nY el perfume aliviará tus pies\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nNada va a pasar, todo estará en paz\n\n[Judas]\nMujer tu perfume\nEs un gasto inútil\nPara un inútil placer\nHubiera servido para muchos pobres\nQue no tienen que comer\n\nHay gente con hambre\nHay gente con sed\n¿No importan más que su frente y sus pies?\n\n[María Magdalena]\nBasta ya de angustias\nDeja los problemas\nOlvida las penas\nYo sé que nada va a pasar\nTodo estará en paz\n\nEsta noche debes descansar\nPues el mundo sin ti seguirá\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nNada va a pasar\nTodo estará en paz\n\n[Jesús]\nNo intentes decirme\nQue tenemos medios\nPara a los pobres salvar\nPues siempre habrá pobres\nY habrá pobreza\nNo dejarán de luchar\n\nVed que aun me veis\nSeguid si aún me veis\nCuando me vaya\nSolos y perdidos estaréis\n\n[María Magdalena]\nVelaré tu sueño\nCalmaré tu fiebre\nCon ungüento te ungiré\nVerás que nada va a pasar\nTodo estará en paz\n\nPorque el agua apagará tu sed\nY el perfume aliviará tus pies\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nDuerme bien duerme bien\nCon el sueño podrás olvidar\n\nDuerme bien duerme bien duerme bien\nDuerme bien duerme bien duerme bien\nDuerme bien\nDuerme bien duerme bien\nDuerme bien duerme bien duerme bien\nDuerme bien\nDuerme bien duerme bien\nDuerme bien duerme bien\nCon el sueño podrás olvidar"
             },
             {
@@ -54,6 +56,7 @@ export const escenasData: SceneData[] = [
                 title: "Hosanna",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/hosanna.mp3",
                 content: "[Coro]\nHosanna Hey, Sanna Sanna Ho\nSanna Hey Sanna Ho Sanna\nOh Jesús, Jesús, muéstrame tu luz\nSanna Ho Sanna Hey Superstar\n\n[Caifás]\nDi a esa gente que se calle\nSi no quieren perecer\nTanto clamor, es un error\nNo permitas su canción\nEs una manifestación\nDeben callar, no blasfemar\n\n[Coro]\nHosanna Hey, Sanna Sanna Ho\nSanna Hey Sanna Ho Sanna\nOh Jesús, Jesús, yo seré tu cruz\nSanna Ho Sanna Hey Superstar\n\n[Jesús]\nNo pretenderás al pueblo callar\nNadie podrá nunca detenerlos\nSi todas estas lenguas pudieras arrancar\nHasta las piedras querrían cantar\n\n[Coro]\nHosanna Hey, Sanna Sanna Ho\nSanna Hey Sanna Ho Sanna\nOh Jesús, Jesús, muéstrame tu luz\nSanna Ho Sanna Hey Superstar\n\n[Jesús]\nNo es mi canción\nEs vuestra canción\nSi cantáis tendréis mis bendiciones\nDe los que sufren será el reino de los cielos\nTodos podréis entrar\nSin excepción\n\n[Coro]\nHosanna Hey, Sanna Sanna Ho\nSanna Hey Sanna Ho Sanna\nOh Jesús, Jesús, muéstrame tu luz\nSanna Ho Sanna Hey Superstar"
             }
         ]
@@ -84,6 +87,7 @@ export const escenasData: SceneData[] = [
                 title: "Jesús Morirá",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/jesús-morirá.mp3",
                 content: "[Anás]\nOh gran Caifás, todos esperan ya\nLos Fariseos se han preparado ya\n\n[Caifás]\nTodos sabéis por qué estamos aquí\nHay un problema, hemos de decidir\n\n[Coro]\n¡Hosanna Superstar!\n¡Hosanna Superstar!\n¡Hosanna Superstar!\n¡Hosanna Superstar!\n\n[Anás]\nVed cómo el populacho está entregado a él\nDos trucos con leprosos y el pueblo está a sus pies\n\n[Todos]\n¡Peligro es!\n\n[Coro]\n¡Jesucristo Superstar!\n\n[Todos]\n¡Peligro es!\n\n[Coro]\n¡Diles que eres al que hay que amar!\n\n[Sacerdote 2]\nEste hombre a nuestro pueblo quiere revolucionar\n\n[Sacerdote 3]\nJesús es un peligro que debemos abortar\n\n[Todos]\n¡Peligro es!\n\n[Coro]\n¡Jesucristo Superstar!\n\n[Todos]\n¡Peligro es!\n\n[Sacerdote 2]\nOye Caifás, apunto están de entrar\n\n[Sacerdote 3]\nVamos Caifás, la guardia has de llamar\n\n[Caifás]\n¡Esperad!\nResolvamos para siempre este grave problema\n\n[Anás]\n¿Entonces que hacemos con el Nazareno?\nEl gran milagrero un ídolo es\n\n[Sacerdote 3]\nNi armas, ni luchas, ni guardias, ni slogans\n\n[Caifás]\nParece muy listo eso ya se ve\n\n[Anás]\nNo hay que dejarle que hable o que rece\nPorque no sabremos callar a sus fans\n\n[Sacerdote 3]\n¿Cómo detenerle si su fama crece?\nSi nos descuidamos, le coronarán\n\n[Caifás]\nVeo malos presagios\nSe que los romanos nos castigaran\nUna gran conmoción\nTambién nuestra propia eliminación\nSerá nuestra propia eliminación\n\n[Todos]\nSerá, será nuestra destrucción\n\n[Caifás]\nY por su culpa la eliminación\n\n[Todos]\nSerá, será la revolución, nuestra eliminación\n\n[Sacerdote 3]\n¿Cómo cortaremos la Jesusmanía?\n\n[Anás]\n¿Cómo detendremos a tan nuevo rey?\n\n[Sacerdote 3]\nEste hombre se hace profeta en un día\nY cómo el bautista impondrá su ley\n\n[Caifás]\nBasta! ¿no comprendéis?\nQue de nuestros cargos nos despojará\nDebemos destruirle\nIgual que el bautista Jesús morirá\nPor el bien de mi pueblo\nJesús morirá\n\n[Todos]\nJesús Jesús Jesús morirá\n\n[Caifás]\nIgual que el bautista Jesús morirá\n\n[Todos]\nJesús Jesús Jesús morirá morirá morirá"
             },
             {
@@ -96,6 +100,7 @@ export const escenasData: SceneData[] = [
                 title: "Di que no me condenaré",
                 type: "song",
                 colorClass: "bg-[#ff8c00]",
+                audioSrc: "/songs/di-que-no-me-condenaré.mp3",
                 content: "[Judas]\nSi os ayudo con mi aclaración\nYo nunca fui capaz de la menor traición\nMe ha costado mucho tiempo decidir\nLo he pensado mucho antes de venir\nOs juro que no lo hago por mi voluntad\nTampoco por dinero ni por vanidad\nDi que no me condenaré\n\nLo hago porque creo que es mi deber\nPorque soy el único que sabe ver\nQue a Cristo de las manos se le escapara\nTodos nuestros planes no se cumplirán\nYo sé que el ha llegado a esa conclusión\nY sé que también que sabe lo de mi traición\nDi que no me condenaré\n\nAnás eres mi amigo lo comprenderás\nCaifás con tu experiencia lo entenderás\nComo los profetas vi la solución\nY así creo que cumplo con mi obligación\nOs juro que no lo hago por mi voluntad\nTampoco por dinero ni por vanidad\nDi que no me\nCondenare\n\n[Anás]\nBasta de excusas, no tengas cuidado\nDi lo que sepas, no tengas temor\n\n[Caifás]\nPodemos tener a ese falso rey\nTú sabes su vida, nosotros la ley\n\n[Anás]\nSi tú nos lo entregas habrá recompensa\n\n[Caifás]\nDenarios de plata yo te pagaré\nBasta que digas dónde se encuentra\n\n[Anás]\nA solas de noche\n\n[Caifás]\nY le prenderé\n\n[Judas]\nGuardad vuestro dinero\n\n[Caifás]\nOh, no te preocupes, tenemos de más\n\n[Judas]\nEs dinero maldito\n\n[Anás]\nPero debes cogerlo, te lo ganarás\n\n[Caifás]\nVerás lo que puedes hacer si lo coges\nLimosna a los pobres\nCualquier buena acción\nYo sé tus motivos\nYo sé lo que sientes\nNo es plata de sangre\nEs una pequeña gratificación\n\n[Judas]\nEl jueves de noche\nLe hallaréis orando\nLejos de todos en el huerto\nDe Getsemaní\n\n[Coro]\nMuy bien Judas\nPobre Judas"
             },
             {
@@ -120,6 +125,7 @@ export const escenasData: SceneData[] = [
                 title: "La última cena",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/la-última-cena.mp3",
                 content: "[Apóstoles]\nTodos los problemas se sumergen\nEn el vino al tiempo de cenar\nNo me molestéis veo las respuestas\nEsta noche nada malo va a pasar\n\nSiempre deseé ser un Apóstol\nY contar al mundo mi verdad\nEscribirla en los evangelios\nPara así pasar a la posteridad\n\n[Jesús]\nEl fin es aún más cruel\nViniendo de un amigo fiel\nTomad bebed, este vino es mi sangre\nTomad comed, este pan es mi cuerpo\nEl fin\nDe mi sangre bebed y de mi cuerpo comed\nY me recordareis cuando yo no esté\n\nDebo de estar loco si sigo creyendo\nQue me vais a recordar\nVeo en vuestras caras que no seré nada\nCuando me veáis marchar\n\nSé que uno me niega y otro me traiciona\n\n[Apóstoles]\n¡No! ¿Quién de nosotros? ¡No es posible!\n\n[Jesús]\nMe negará Pedro antes de tres horas\nNegará tres veces\nMás ha de llegar\nUno de vosotros de mis escogidos\nMe ha de traicionar\n\n[Judas]\nBasta de lamentos\nTú sabes bien quien es\n\n[Jesús]\n¡Ve a hacer lo que debes!\n\n[Judas]\n¿Quieres que lo haga?\n\n[Jesús]\n¡Te están esperando!\n\n[Judas]\nSabes mis motivos\n\n[Jesús]\nNo me importa el por qué\n\n[Judas]\nYo te admiraba y ahora te desprecio\n\n[Jesús]\n¡Tú mientes! ¡Tú Judas!\n\n[Judas]\n¿Quieres que lo haga?\nCristo si me arrepiento\n¿Que hay de tu martirio?\n¡No morirías!\n\n[Jesús]\n¡Vete a hacer lo que has que hacer!\nNo más palabras, no quiero saber\n¡¡Vete!!\n\n[Apóstoles]\nTodos los problemas se sumergen\nEn el vino al tiempo de cenar\nNo me molestéis veo las respuestas\nEsta noche nada malo va a pasar\n\nSiempre deseé ser un Apóstol\nY contar al mundo mi verdad\nEscribirla en los evangelios\nPara así pasar a la posteridad\n\n[Judas]\nJesús\nMíranos bien\nQué has hecho de nosotros\nDe nuestros ideales\nQue ya han muerto por ti\nY aun no es el final\nDejas que uno te entregue\nIgual que un criminal\nComo un ángel desvalido\nUn héroe perdido\nComo a un héroe perdido\nComo a un tonto ángel santo\nComo a un animal herido\n\n[Jesús]\nVe que te esperan\nVe que te esperan\n\n[Judas]\nCuanto más te miro menos puedo entender\nPor qué has dicho no a lo que supiste emprender\nHubieras podido realizar nuestro sueño\n\n[Apóstoles]\nTodos los problemas se sumergen\nEn el vino al tiempo de cenar\nNo me molestéis veo las respuestas\nEsta noche nada malo va a pasar\n\nSiempre deseé ser un Apóstol\nY contar al mundo mi verdad\nEscribirla en los evangelios\nPara así pasar a la posteridad"
             }
         ]
@@ -140,12 +146,13 @@ export const escenasData: SceneData[] = [
                 title: "Marcos 14: 32-42",
                 type: "reading",
                 colorClass: "bg-[#ff8c00]",
-                content: "Llegaron a una propiedad llamada Getsemaní, y dijo a sus discípulos: «Sentaos aquí mientras voy a orar.» Y se llevó consigo a Pedro, a Santiago y a Juan, y empezó a sentir pavor y angustia. Y les dijo: «Mi alma está triste hasta la muerte; quedaos aquí y velad.»\n\nAdelantándose un poco, cayó en tierra y oraba que, si era posible, pasara de él aquella hora. Y decía: «¡Abba, Padre!; todo es posible para ti; aparta de mí este cáliz; pero no sea lo que yo quiero, sino lo que quieres tú.»\n\nViene y los encuentra dormidos, y dice a Pedro: «Simón, ¿duermes?, ¿no has podido velar una hora? Velad y orad, para no caer en tentación; el espíritu está dispuesto, pero la carne es débil.» Y se alejó de nuevo y oró repitiendo las mismas palabras.\n\nVolvió y los encontró dormidos otra vez, porque sus ojos estaban cargados de sueño; y no sabían qué contestarle. Viene por tercera vez y les dice: «Dormid ya y descansad. ¡Basta! Ha llegado la hora; mirad, el Hijo del hombre va a ser entregado en manos de los pecadores. ¡Levantaos, vamos! Mirad, el que me entrega está cerca.»"
+                content: "Llegaron a una propiedad llamada Getsemaní, y dijo a sus discípulos: «Sentaos aquí mientras voy a orar.» Y se llevó consigo a Pedro, a Santiago y a Juan, y empezó a sentir pavor y angustia. Y les dijo: «Mi alma está triste hasta la muerte; quedaos aquí y velad.»\n\nAdelantándose un poco, cayó en tierra y oraba que, si era posible, pasara de él aquella hora. Y decía: «¡Abba, Padre!; todo es posible para ti; aparta de mí este cáliz; pero no sea lo que yo quiero, sino lo que quieres tú.»\n\nViene y los encuentra dormidos, y dice a Pedro: «Simón, ¿duermes?, ¿no has podido velar una hora? Velad y orad, para no caer en tentación; el espíritu está dispuesto, pero la carne es débil.» Y se alejó de nuevo y oró repitiendo las mismas palabras.\n\nVolvió y los encontró dormidos otra vez, porque sus ojos estaban cargados de sueño; y no sabían qué contestarle. Viene por third vez y les dice: «Dormid ya y descansad. ¡Basta! Ha llegado la hora; mirad, el Hijo del hombre va a ser entregado en manos de los pecadores. ¡Levantaos, vamos! Mirad, el que me entrega está cerca.»"
             },
             {
                 title: "Getsemaní",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/getsemaní.mp3",
                 content: "Yo quiero decir\nSi puedo pedir\nQue apartes de mí este cáliz\nYa no deseo su amargura\nAhora quema y yo he cambiado\nY no sé por qué he empezado\n\nYo tenía fe\nCuando comencé\nAhora estoy triste y cansado\nMi camino de tres años\nMe parece que son treinta\n¿Y qué más puede un hombre hacer?\n\nSi he de morir\nQue se cumpla todo lo que Tú quieres de mí\nDeja que me odien, que me claven en Su cruz\nYo quiero ver, yo quiero ver, mi Dios\nYo quiero ver, yo quiero ver, mi Dios\nQuiero saber, quiero saber, Señor\nQuiero saber, quiero saber, Señor\n\nSi he de morir\nDime si es por qué he de ser mejor de lo que fui\nDime si mi vida con la muerte he de cumplir\nYo quiero ver, yo quiero ver, mi Dios\nYo quiero ver, yo quiero ver, mi Dios\nQuiero saber, quiero saber, Señor\nQuiero saber, quiero saber, Señor\n\nCon morir, ¿qué voy a conseguir?\nAl morir, ¿qué voy a conseguir?\nQuiero saber, quiero saber, Señor\nQuiero saber, quiero saber, Señor\n\n¿Por qué he de morir?\n¿Por qué?\nDime por qué quieres que me claven en Su cruz\nMuéstrame el motivo, dame un poco de Tu luz\nDi que no es inútil Tu deseo y moriré\nMe enseñaste el cómo, el cuándo, pero no el porqué\n\nMuy bien, yo moriré\nPero, pero, por favor\nCuando muera, cuando muera, mírame\nPor favor, mira mi muerte\n\nY yo tenía fe\nCuando comencé\nAhora estoy triste y cansado\nMis tres años ya son miles\n¿Por qué entonces\nTengo miedo de que ya todo termine?\n\nDios, yo no empecé\nFue Tu voluntad\nDame el cáliz de amargura\nClava, azota, rompe, mata\nPero pronto, hazlo pronto\nO yo me voy a arrepentir"
             },
             {
@@ -158,6 +165,7 @@ export const escenasData: SceneData[] = [
                 title: "El arresto",
                 type: "song",
                 colorClass: "bg-[#ff8c00]",
+                audioSrc: "/songs/el-arresto.mp3",
                 content: "[Judas]\nEl ahí y sus amigos duermen\nJudas, con un beso me traicionas\nCuéntame di qué vamos a hacer, cuéntame\nDi qué vamos a hacer\n\n[Apóstoles]\nOh Señor (Cuéntanos di qué vamos a hacer)\nYo luchare (Cuéntanos di qué vamos a hacer)\nLuchare por ti (Cuéntanos di qué vamos a hacer)\nYo luchare por ti (Cuéntanos di qué vamos a hacer)\nOh Señor, yo te defenderé\nOh Señor, yo te defenderé\nOh Señor, yo te defenderé\nOh Señor, yo te defenderé\n\n[Jesús]\n¿Por qué queréis luchar?\nGuardad pronto las espadas\nTodo ya va a terminar\nLas luchas engendran luchas\nY tu misión será pescar\n\n[Coro]\n¿Dime Cristo qué vas a hacer?\n¿Luchar piensas por el poder?\nEstás solo y tienes temor\n¿Cuál ha sido tu gran error?\nTu carrera terminará\nY tu nombre se borrará\n¿Cómo ves lo que ha de venir?\nLos tuyos no te han de servir\n\nVamos, pues, a ver a Caifás\nVamos no tengas temor\nTe dará la pena mayor\nY por fin todo acabara\n\nVamos, Dios, tienes que ceder\nDinos que es lo que vas a hacer\nA tus gentes convencerás\nY al final te salvaras\n\n¿Dime Cristo qué vas a hacer?\n¿Luchar piensas por el poder?\nEstás solo y tienes temor\n¿Cuál ha sido tu gran error?\n\nVamos, pues, a ver a Caifás\nVamos no tengas temor\nTe dará la pena mayor\nY por fin todo acabara\n\n[Guardias]\nYa esta preso, lo tenemos\nYa esta preso, lo tenemos\nYa esta preso, lo tenemos\nYa esta preso, lo tenemos\nYa lo tenemos, lo hemos prendido\n\n[Caifás]\nCristo tienes que dar cuenta de una grave acusación\nDi si es cierto eso que dices\nQue eres el hijo de Dios\n\n[Jesús]\nTú lo dices\nTú dices quien soy\n\n[Caifás]\nYa lo oísteis caballeros\n¿Qué más pruebas necesitáis?\nJudas gracias por la entrega\nQuédate, lo verás sangrar\n\n[Guardias]\nYa esta preso, lo tenemos\nYa esta preso, lo tenemos\nYa esta preso, lo tenemos\nYa esta preso, lo tenemos\n\n[Coro]\nId a Pilatos\nId a Pilatos\nId a Pilatos\nId a Pilatos"
             }
         ]
@@ -184,6 +192,7 @@ export const escenasData: SceneData[] = [
                 title: "Sueño de pilatos",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/sueño-de-pilatos.mp3",
                 content: "Soñé un sueño muy extraño\nQue no sé descifrar\nA un hombre hacían daño, ante mí\nLe iban a matar\n\nPregunté cuál era su crimen\nQue como sucedió\nÉl solo dulcemente me miró\nY no me contestó\n\nDe pronto, miles de hombres locos de furor\nCayeron sobre él\nY como apareció\nSe desvaneció\n\nPor fin, vi que el mundo entero\nEl mismo que le odió\nLlorando arrepentido, señaló\nPilatos lo mató"
             },
             {
@@ -196,6 +205,7 @@ export const escenasData: SceneData[] = [
                 title: "Negaciones de Pedro",
                 type: "song",
                 colorClass: "bg-[#ff8c00]",
+                audioSrc: "/songs/negaciones-de-pedro.mp3",
                 content: "[Mujer 1]\nYo creo haberte visto antes y ahora\nte recuerdo bien\nEse ... Jesús, tú siempre ibas con él\n\n[Pedro]\nTe has confundido yo no le conozco\nno sé ni quién es jamás le vi\nnunca fui con él\n\n[Hombre 1]\nEs claro porque yo también te he visto\ny estabas con él, no puedes negar\n\n[Pedro]\nTe juro que yo nunca fui su amigo\n\n[Hombre 2]\nTambién yo te vi, estabas allí\n\n[Pedro]\nNo le conozco\n\n[María Magdalena]\nQué has hecho Pedro no es verdad\nle acabas de negar\n\n[Pedro]\nTenía miedo hablar de él\nme iban a denunciar\n\n[María Magdalena]\nComo Jesús pudo saber\nlo que iba a suceder?"
             }
         ]
@@ -224,6 +234,7 @@ export const escenasData: SceneData[] = [
                 title: "Palacio de Pilatos",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/palacio-de-pilatos.mp3",
                 content: "[Pilatos]\nQuién es y qué hace aquí\n¿Este pobre desgraciado?\n¿Quién es el acusado?\n\n[Soldado]\nUn tal Cristo dicen que es rey\n\n[Pilatos]\nOh tú eres Jesucristo\nEl que arma tantos líos\nTe llaman rey de los Judíos\nYa sé que eres popular\nPero ¿Eres rey, rey de verdad?\n\n[Jesús]\nTú lo dices\n\n[Pilatos]\n¿Qué quieres demostrar?\nEsa no es respuesta\nNo quieres admitir\nQue tal vez puedas morir\n\n¿Habéis visto de verdad?\nMe asombra su tranquilidad\nQué singular, no quiere hablar\nGalilea es tu región y no es de mi jurisdicción\nNo soy tu juez\nHerodes es\n\n[Coro]\nHo Sanna\nHey Sanna\nSanna sanna ho\nSanna hey sanna ho, Jesus\n\nPuedes explicar\nSi este es tu final\nSi viniste solo para morir"
             },
             {
@@ -236,6 +247,7 @@ export const escenasData: SceneData[] = [
                 title: "Canción de Herodes",
                 type: "song",
                 colorClass: "bg-[#ff8c00]",
+                audioSrc: "/songs/canción-de-herodes.mp3",
                 content: "Oh, Jesús, qué alegría tenerte aquí a mis pies\nTan famoso en pocos días y ahora ya lo ves\nCuras ciegos, devuelves la salud\nY eres Dios, y eres rey, eso te crees tú\n\nAsí que eres Cristo, el gran Jesucristo\nSi es verdad que eres divino\nHaz que el agua se haga vino\nY si lo consigues sabré la verdad\nTendrás tu libertad\n\nEn muy poco tiempo tú has causado sensación\nDicen que eres de este año gran revelación\n¡Ay, qué pena si nada es verdad!\nAunque sé que estando aquí lo vas a demostrar\n\nAsí que eres Cristo, el gran Jesucristo\nPrueba tu fuerza divina\nAnda sobre mi piscina\nY si lo consigues sabré la verdad\nVamos no esperes más\n\nQuiero solo que me pruebes que eres superstar\nY por qué los que te aclaman te han puesto un altar\nQuiero verlo, soy tu devoto fan\n¿Por qué no quieres convertir este palacio en pan?\n\nSi es verdad que eres Cristo, el gran Jesucristo\nY si eres más que rey vamos hazlo de una vez\n¿Qué es lo que pasa?\n¿No te gusta mi casa?\nVamos, no esperes más\n\nAcaso me temes, Cristo, señor Jesucristo\n¡Vaya timo! ¿Que eres Dios? ¡No me lo creo ni yo!\n¡Fuera de aquí!\n¡Con bromitas a mí!\n¡Fuera de aquí, falso! ¡Fuera de aquí, falso!\n¡Fuera de aquí, falso rey!\n¡Fuera! ¡Fuera! ¡Fuera!\n¡Yo soy la única superstar!"
             },
             {
@@ -248,6 +260,7 @@ export const escenasData: SceneData[] = [
                 title: "Juicio ante Pilatos",
                 type: "song",
                 colorClass: "bg-[#00d800]",
+                audioSrc: "/songs/juicio-ante-pilatos.mp3",
                 content: "[Pilatos]\nAquí esta el rey\nEn mi casa otra vez\n¿Y qué pasó?\n¿Herodes no es su juez?\n\n[Caifás]\nRoma será\nQuien juzgue Nazareth\nPorque el matar no existe en nuestra ley\nHay que crucificar\nTú lo tienes que hacer\nQueremos verle en cruz\nTú lo debes hacer\n\n[Pilatos]\nHáblame, pues, Jesús\nTe han traído a mí\nManiatado por tu propio pueblo\nTú debes saber cuáles son los motivos\nÓyeme falso rey\n¿Dónde está tu Dios?\n¿Y tu reino dónde está?\n\n[Jesús]\nMi reino no es de este mundo\nNo, no, no\n\n[Coro]\nHáblanos, pues, Jesús\n\n[Jesús]\nMi reino no es de este mundo\nNo lo comprendéis, no\n\n[Pilatos]\nEres, pues, rey\n\n[Jesús]\nEso lo dices tú\nEstoy aquí buscando la verdad\n\n[Pilatos]\n¿Qué es la verdad?\n¿Acaso es una ley?\n¿Es mi verdad?\n¿O tu verdad lo es?\n\n[Coro]\n¡Crucifica, crucifica!\n\n[Pilatos]\n¿Y qué queréis?\n¿Matar a vuestro rey?\n\n[Coro]\nNo hay más rey que el Cesar\n\n[Pilatos]\nCreo que no ha roto vuestra ley\n\n[Coro]\nNo hay más rey que el Cesar\nCrucifica\n\n[Pilatos]\nNunca tuvisteis respeto al Cesar\n¿Porque motivó lo invocáis?\nQuien es Jesús\n¿Es diferente?\nFalsos mesías fabricáis\n\n[Coro]\nCrucifica, crucifica\nClávale, clávale, clávale\n1, 2, 3, 38, 39\n\n[Pilatos]\n¿De dónde vienes tú?\n¿Quién eres tú, Cristo?\nDime\nSi puedo hacer algo\nPara que no mueras\nDime\nTienes tu vida en mis manos\nY en mi poder\nNo te has defendido\n¿Es que no quieres comprender?\n\n[Jesús]\nEn tus manos nada está\nSi tienes poder\nTe viene del más allá\nTodo está dispuesto\nY no podrás cambiarlo\n\n[Pilatos]\nEstás loco Jesús\nTe quiero ayudar\n\n[Coro]\n¡Crucifícalo! ¡Pilatos ya!\nRecuerda al Cesar, es tu deber\nGuarda la paz de nuestro pueblo\nRecuerda al Cesar, si no lo matas\nTu puesto lo podrás perder\n¡Crucifica!\n\n[Pilatos]\nNo detendré esta destrucción\nMártir inútil\nSi quieres la muerte\nMuere por fin\nPero de esta acción\nLavo mis manos\nDe sangre inocente"
             }
         ]
@@ -274,6 +287,7 @@ export const escenasData: SceneData[] = [
                 title: "Crucifixión",
                 type: "song",
                 colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/crucifixión.mp3",
                 content: "Padre, perdónalos porque no saben lo que hacen\nMadre ¿Dónde está mi Madre?\nDios mío, Dios mío, ¿por qué me has abandonado?\nTengo Sed\nTengo Sed\nTengo Sed\n¡Dios mío, tengo sed!\nTodo se ha cumplido\nPadre, en tus manos encomiendo mi espíritu"
             },
             {

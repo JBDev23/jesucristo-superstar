@@ -10,11 +10,13 @@ interface SceneDetailProps {
     type: "song" | "reading";
     colorClass: string;
     content: string;
+    audioSrc?: string;
   }[];
   onNext?: () => void;
   onPrev?: () => void;
   hasNext?: boolean;
   hasPrev?: boolean;
+  onPlaySong?: (title: string, src: string) => void;
 }
 
 export default function SceneDetailModal({
@@ -27,6 +29,7 @@ export default function SceneDetailModal({
   onPrev,
   hasNext,
   hasPrev,
+  onPlaySong
 }: SceneDetailProps) {
   
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -102,6 +105,17 @@ export default function SceneDetailModal({
                     <h3 className="text-2xl font-bold text-black font-caveat-brush">
                       {item.title}
                     </h3>
+
+                    {item.type === "song" && onPlaySong && (
+                      <button 
+                        onClick={() => onPlaySong(item.title, item.audioSrc || "/audio/demo.mp3")}
+                        className="w-10 h-10 rounded-full flex shrink-0 items-center justify-center bg-azul-noche text-white hover:scale-110 transition-all cursor-pointer shadow-md"
+                        aria-label="Reproducir canción"
+                        title="Escuchar canción"
+                      >
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      </button>
+                    )}
                   </div>
 
                   <div className="px-4 sm:px-8 border-l-4 border-azul-noche/20 ml-2 sm:ml-4">
