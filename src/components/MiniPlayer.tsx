@@ -114,7 +114,7 @@ export default function MiniPlayer({
       </style>
       <div
         className={`fixed bottom-6 z-60 bg-[#FFD977] border-4 border-azul-noche text-azul-noche rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center transition-all duration-500 ease-in-out
-        left-4 right-4 w-fit mx-auto px-5 py-1 gap-4 
+        left-4 right-4 max-w-[95%] md:max-w-fit mx-auto px-5 py-1 gap-4 
         ${isVisible ? "translate-y-0 opacity-100" : "translate-y-32 opacity-0 pointer-events-none"}
       `}
       >
