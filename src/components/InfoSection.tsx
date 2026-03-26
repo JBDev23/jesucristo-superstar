@@ -1,17 +1,15 @@
-import { useState } from "react";
 import SceneCard from "./SceneCard";
 import SceneDetailModal from "./SceneDetailModal";
 import { escenasData } from '../data/scenesData';
 
 interface InfoSectionProps {
   onPlaySong?: (title: string, src: string) => void;
+  selectedIndex: number | null;
+  setSelectedIndex: (index: number | null) => void;
 }
 
-export default function InfoSection({ onPlaySong }: InfoSectionProps) {
+export default function InfoSection({ onPlaySong, selectedIndex, setSelectedIndex }: InfoSectionProps) {
   
-
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
   const isModalOpen = selectedIndex !== null;
 
   const currentScene = isModalOpen ? escenasData[selectedIndex] : null;

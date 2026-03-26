@@ -7,9 +7,11 @@ interface MiniPlayerProps {
   isVisible: boolean;
   onSongEnd?: () => void;
 
-  upNext?: { title: string, countdown: number } | null;
+  upNext?: { title: string; countdown: number } | null;
   onCancelUpNext?: () => void;
   onPlayUpNextNow?: () => void;
+
+  onTitleClick?: () => void;
 }
 
 const formatTime = (time: number) => {
@@ -25,9 +27,10 @@ export default function MiniPlayer({
   onClose,
   isVisible,
   onSongEnd,
-  upNext, 
-  onCancelUpNext, 
-  onPlayUpNextNow
+  upNext,
+  onCancelUpNext,
+  onPlayUpNextNow,
+  onTitleClick,
 }: MiniPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -85,11 +88,11 @@ export default function MiniPlayer({
 
   const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!audioRef.current || duration === 0) return;
-    
+
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const clickPercent = clickX / rect.width;
-    
+
     audioRef.current.currentTime = clickPercent * duration;
   };
 
@@ -119,9 +122,9 @@ export default function MiniPlayer({
       `}
       >
         {audioSrc && (
-          <audio 
-            ref={audioRef} 
-            src={audioSrc} 
+          <audio
+            ref={audioRef}
+            src={audioSrc}
             onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
             onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
             onEnded={() => {
@@ -183,40 +186,48 @@ export default function MiniPlayer({
         </div>
 
         {/* INFO DE LA CANCIÓN */}
-        <div className="flex flex-col flex-1 min-w-0 overflow-hidden relative">
-          <span className="text-sm md:text-base font-mono text-azul-noche/70 pr-2">
-            {formatTime(currentTime)} / {formatTime(duration)}
-          </span>
+        <div
+          className="flex flex-col flex-1 min-w-0 overflow-hidden relative"
+          onClick={onTitleClick}
+          title="Ver letra de esta canción"
+        >
+          <div className="group cursor-pointer">
+            <span className="text-sm md:text-base font-mono text-azul-noche/70 pr-2 group-hover:text-[#FF6E28]">
+              {formatTime(currentTime)} / {formatTime(duration)}
+            </span>
 
-          {/* Contenedor del texto con el difuminado */}
-          <div
-            className={`w-full min-w-50 max-w-65 overflow-hidden whitespace-nowrap flex items-center ${isLongTitle ? "mask-fade-edges" : ""}`}
-          >
-            {/* El div que realmente se mueve */}
+            {/* Contenedor del texto con el difuminado */}
             <div
-              className={`${isLongTitle ? "animate-marquee flex w-max" : "truncate"}`}
+              className={`w-full min-w-50 max-w-65 overflow-hidden whitespace-nowrap flex items-center ${isLongTitle ? "mask-fade-edges" : ""}`}
             >
-              <span
-                className={`text-lg md:text-xl font-bold font-sans ${isLongTitle ? "pr-8" : ""}`}
+              {/* El div que realmente se mueve */}
+              <div
+                className={`${isLongTitle ? "animate-marquee flex w-max" : "truncate"}`}
               >
-                {songTitle}
-              </span>
-
-              {/* Si es largo, duplicamos el texto para que el bucle sea infinito y no haya saltos */}
-              {isLongTitle && (
                 <span
-                  className="text-lg md:text-xl font-bold font-sans pr-8"
-                  aria-hidden="true"
+                  className={`text-lg md:text-xl font-bold font-sans ${isLongTitle ? "pr-8" : ""} group-hover:text-[#FF6E28]`}
                 >
                   {songTitle}
                 </span>
-              )}
+
+                {/* Si es largo, duplicamos el texto para que el bucle sea infinito y no haya saltos */}
+                {isLongTitle && (
+                  <span
+                    className="text-lg md:text-xl font-bold font-sans pr-8"
+                    aria-hidden="true"
+                  >
+                    {songTitle}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-
-          <div 
+          <div
             className="h-1 w-[90%] bg-[#fcf6e3]/50 rounded-full mt-1.5 overflow-hidden cursor-pointer"
-            onClick={handleSeek}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleSeek(e);
+            }}
           >
             <div
               className="h-full bg-[#FF6E28] rounded-full relative"
@@ -231,7 +242,7 @@ export default function MiniPlayer({
         </div>
 
         {/* CONTROLES */}
-        <div className="flex items-center gap-2 pl-2 border-l border-azul-noche/70">          
+        <div className="flex items-center gap-2 pl-2 border-l border-azul-noche/70">
           <button
             onClick={togglePlay}
             className="w-10 h-10 ml-1 flex items-center justify-center bg-azul-noche text-white rounded-full hover:scale-110 hover:bg-[#FF6E28] hover:text-azul-noche transition-all shadow-md cursor-pointer"
@@ -247,12 +258,16 @@ export default function MiniPlayer({
             )}
           </button>
 
-          <button 
+          <button
             onClick={stopSong}
             className=" text-[#FF6E28]/80 hover:text-[#FF6E28] hover:scale-110 transition-all cursor-pointer"
             aria-label="Detener canción"
           >
-            <svg className="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-7 h-7 md:w-8 md:h-8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path d="M6 6h12v12H6z" />
             </svg>
           </button>
@@ -283,25 +298,49 @@ export default function MiniPlayer({
               <span className="text-azul-noche font-bold text-sm tracking-wider uppercase">
                 Siguiente en {upNext.countdown}...
               </span>
-              <button onClick={onCancelUpNext} className="text-azul-noche/60 hover:text-azul-noche hover:scale-110 transition-all cursor-pointer">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              <button
+                onClick={onCancelUpNext}
+                className="text-azul-noche/60 hover:text-azul-noche hover:scale-110 transition-all cursor-pointer"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
             </div>
-            
-            <div className="text-azul-noche font-black text-xl font-sans truncate pr-2" title={upNext.title}>
+
+            <div
+              className="text-azul-noche font-black text-xl font-sans truncate pr-2"
+              title={upNext.title}
+            >
               {upNext.title}
             </div>
-            
+
             <div className="flex gap-3 mt-1">
-              <button 
-                onClick={onPlayUpNextNow} 
+              <button
+                onClick={onPlayUpNextNow}
                 className="flex-1 bg-azul-noche text-white border-2 border-azul-noche font-bold py-2 hover:bg-[#FF6E28] hover:text-azul-noche transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow-md"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
                 Reproducir
               </button>
-              <button 
-                onClick={onCancelUpNext} 
+              <button
+                onClick={onCancelUpNext}
                 className="flex-1 bg-transparent text-azul-noche border-2 border-azul-noche font-bold py-2 hover:bg-[#FF6E28] hover:text-white transition-colors cursor-pointer"
               >
                 Cancelar

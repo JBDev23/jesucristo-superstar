@@ -16,6 +16,8 @@ function App() {
   });
 
   const [upNext, setUpNext] = useState<{ title: string, src: string, countdown: number } | null>(null);
+
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   
   const [isPastHero, setIsPastHero] = useState(false);
 
@@ -72,11 +74,36 @@ function App() {
     setUpNext(null);
   };
 
+  const handleTitleClick = () => {
+    if (!currentSong) return;
+
+    const sceneIndex = escenasData.findIndex(escena => 
+      escena.modalItems.some(item => item.title === currentSong.title)
+    );
+
+    if (sceneIndex !== -1) {
+      setSelectedIndex(sceneIndex);
+
+      setTimeout(() => {
+        const elementId = `item-${currentSong.title.replace(/\s+/g, '-')}`;
+        const element = document.getElementById(elementId);
+        
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+    }
+  };
+
   return (
     <main className="min-h-screen w-full">
       <Hero />
       
-      <InfoSection onPlaySong={handlePlaySong}/>
+      <InfoSection 
+        onPlaySong={handlePlaySong}
+        selectedIndex={selectedIndex} 
+        setSelectedIndex={setSelectedIndex}  
+      />
       
       <Footer />
 
@@ -95,6 +122,7 @@ function App() {
               setUpNext(null);
             }
           }}
+          onTitleClick={handleTitleClick}
         />
       )}
     </main>

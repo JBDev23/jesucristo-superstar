@@ -94,8 +94,10 @@ export default function SceneDetailModal({
                 ? "md:columns-2 lg:columns-3" 
                 : "columns-1 max-w-3xl";
 
+              const itemId = `item-${item.title.replace(/\s+/g, '-')}`;
+
               return (
-                <div key={index} className="flex flex-col">
+                <div key={index} id={itemId} className="flex flex-col scroll-mt-8">
                   <div className={`${item.colorClass} border-4 border-azul-noche rounded-2xl py-3 px-6 inline-flex w-fit items-center gap-3 shadow-md mb-6 -ml-2 sm:-ml-4`}>
                     {item.type === "song" ? (
                       <svg className="w-6 h-6 text-black shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" /></svg>
