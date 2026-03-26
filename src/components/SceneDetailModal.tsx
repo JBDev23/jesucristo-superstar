@@ -54,7 +54,7 @@ export default function SceneDetailModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-azul-noche/60 backdrop-blur-sm">
-      <div className="bg-[#ffe39b] w-full max-w-8xl max-h-[90vh] rounded-4xl border-8 border-azul-noche flex flex-col shadow-2xl relative overflow-hidden">
+      <div className="bg-[#ffe39b] w-full max-w-8xl h-[90dvh] rounded-4xl border-8 border-azul-noche flex flex-col shadow-2xl relative overflow-hidden">
         
         {/* BOTÓN DE CERRAR */}
         <button
