@@ -128,7 +128,7 @@ export default function SceneDetailModal({
             })}
           </div>
 
-          <div className="mt-auto pt-16 flex justify-between items-center w-full">
+          <div className="mt-auto mb-15 lg:mb-0 pt-16 flex justify-between items-center w-full">
             
             {/* Botón Anterior */}
             <div className="w-1/3">
