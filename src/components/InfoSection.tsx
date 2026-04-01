@@ -6,9 +6,10 @@ interface InfoSectionProps {
   onPlaySong?: (title: string, src: string) => void;
   selectedIndex: number | null;
   setSelectedIndex: (index: number | null) => void;
+  onItemClick?: (sceneIndex: number, itemTitle: string) => void;
 }
 
-export default function InfoSection({ onPlaySong, selectedIndex, setSelectedIndex }: InfoSectionProps) {
+export default function InfoSection({ onPlaySong, selectedIndex, setSelectedIndex, onItemClick }: InfoSectionProps) {
   
   const isModalOpen = selectedIndex !== null;
 
@@ -35,6 +36,7 @@ export default function InfoSection({ onPlaySong, selectedIndex, setSelectedInde
               songs={escena.songs}
               readings={escena.readings}
               onActionClick={() => setSelectedIndex(index)}
+              onItemClick={(itemTitle) => onItemClick && onItemClick(index, itemTitle)}
             />
           ))}
         </div>

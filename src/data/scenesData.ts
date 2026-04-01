@@ -269,11 +269,14 @@ export const escenasData: SceneData[] = [
         title: "CRUCIFIXIÓN Y SEPULCRO",
         synopsis: "La culminación de la historia. Jesús es crucificado, pronunciando sus últimas palabras de perdón, abandono y consumación antes de entregar su espíritu. Finalmente, es bajado de la cruz y depositado en un sepulcro nuevo en un huerto cercano.",
         songs: [
-            { title: "Crucifixión" }
+            { title: "Crucifixión" },
+            { title: "Muerte de Judas" },
+            { title: "Juan Diecinueve Cuarenta y Uno" }
         ],
         readings: [
             { title: "Juan 19: 16-18" },
             { title: "Juan 19: 28-30" },
+            { title: "Mateo 27: 3-5" },
             { title: "Juan 19: 41" }
         ],
         modalItems: [
@@ -297,10 +300,30 @@ export const escenasData: SceneData[] = [
                 content: "Después de esto, sabiendo Jesús que ya todo estaba cumplido, para que se cumpliera la Escritura, dijo: «Tengo sed.»\n\nHabía allí una vasija llena de vinagre. Sujetaron a una rama de hisopo una esponja empapada en vinagre y se la acercaron a la boca.\n\nCuando tomó el vinagre, Jesús dijo: «Todo está cumplido.» E inclinando la cabeza, entregó el espíritu."
             },
             {
-                title: "Juan 19: 41",
+                title: "Mateo 27: 3-5",
                 type: "reading",
                 colorClass: "bg-[#ff8c00]",
+                content: "3 Entonces Judas, el que lo había entregado, al ver que Jesús había sido condenado, se llenó de remordimiento y devolvió las treinta monedas de plata a los sumos sacerdotes y a los ancianos,\n4 diciendo: «He pecado entregando sangre inocente.» Pero ellos le contestaron: «¿A nosotros qué nos importa? ¡Allá tú!»\n5 Entonces él arrojó las monedas de plata en el Templo, se marchó y fue a ahorcarse."
+            },
+            {
+                title: "Muerte de Judas",
+                type: "song",
+                colorClass: "bg-[#ffed00]",
+                audioSrc: "/songs/muerte-de-judas.mp3",
+                content: "Dios yo lo he visto\nY medio muerto está\nCon solo recordarlo yo quiero llorar\nMuy duro fue el castigo, se desangrará\nY ahora todo el mundo a mí me ha de culpar\n\nNo creo que comprenda que era mi deber\nQue yo no sabía que él iba a sufrir\nTanto sufrir\nCreer\nDeber\n\nBasta de excusas no te justifiques\n¿Porque la conciencia te ha de remorder?\nSolo por venganza tú nos lo entregaste\nEl pueblo le odia, todo salió bien\nPor una traición, tan solo por eso\nSerás recordado, salvaste a Israel\nHa sido un buen precio por un solo beso\nTe has liberado y acabas con él\n\nCristo tú no me oyes\nPero lo que hice fue tu voluntad\nCristo todo mi pueblo\nPor lo de tu muerte me despreciará\n\nEstoy salpicado de sangre inocente\nArriba del fango se me arrastrará\nEstoy salpicado de sangre inocente\nAhora la historia me condena, condena, condenará\n\nYo le sigo queriendo\nY no podré olvidarle\nSé que es un hombre más\nÉl no es un rey\nNo sé comprender\nSi es igual que yo\nMiedo me da\nCuando muerto esté\nMe abandonará\n¿Me amará también o me olvidará?\n\nDios mío\nPor qué me elegiste a mí\nPor qué me elegiste a mí\nPara tu estúpido crimen\n\nMi mente duda\nMi alma está en tinieblas\nDios mío\nYo no sé ni sabré\nPor qué me elegiste a mí\n\nMátame\nMátame, mátame, mátame, mátame, mátame, mátame\n¿Por qué a mí?\n¿Por qué yo?\nMátame\nMátame, mátame\nMátame\n\nAdiós Judas\nPobre Judas\nAdiós Judas\nPobre Judas\nAdiós Judas\nPobre Judas\nAdiós Judas\nPobre Judas\nAdiós Judas\nPobre Judas\nAdiós Judas\nPobre Judas"
+            },
+            {
+                title: "Juan 19: 41",
+                type: "reading",
+                colorClass: "bg-[#00d800]",
                 content: "En el lugar donde lo habían crucificado había un huerto, y en el huerto un sepulcro nuevo en el que nadie había sido enterrado todavía."
+            },
+            {
+                title: "Juan Diecinueve Cuarenta y Uno",
+                type: "song",
+                colorClass: "bg-[#ff8c00]",
+                audioSrc: "/songs/juan-diecinueve-cuarenta-y-uno.mp3",
+                content: "[Pieza instrumental sin letra]"
             }
         ]
     }

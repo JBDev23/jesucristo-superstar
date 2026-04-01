@@ -213,7 +213,7 @@ export default function MiniPlayer({
                 {/* Si es largo, duplicamos el texto para que el bucle sea infinito y no haya saltos */}
                 {isLongTitle && (
                   <span
-                    className="text-lg md:text-xl font-bold font-sans pr-8"
+                    className="text-lg md:text-xl font-bold font-sans pr-8 group-hover:text-[#FF6E28]"
                     aria-hidden="true"
                   >
                     {songTitle}

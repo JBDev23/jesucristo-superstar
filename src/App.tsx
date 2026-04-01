@@ -74,24 +74,26 @@ function App() {
     setUpNext(null);
   };
 
-  const handleTitleClick = () => {
-    if (!currentSong) return;
+  const openModalAndScroll = (sceneIndex: number, itemTitle: string) => {
+    setSelectedIndex(sceneIndex);
+    
+    setTimeout(() => {
+      const elementId = `item-${itemTitle.replace(/\s+/g, '-')}`;
+      const element = document.getElementById(elementId);
+      
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 150);
+  };
 
+const handleTitleClick = () => {
+    if (!currentSong) return;
     const sceneIndex = escenasData.findIndex(escena => 
       escena.modalItems.some(item => item.title === currentSong.title)
     );
-
     if (sceneIndex !== -1) {
-      setSelectedIndex(sceneIndex);
-
-      setTimeout(() => {
-        const elementId = `item-${currentSong.title.replace(/\s+/g, '-')}`;
-        const element = document.getElementById(elementId);
-        
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 150);
+      openModalAndScroll(sceneIndex, currentSong.title);
     }
   };
 
@@ -103,6 +105,7 @@ function App() {
         onPlaySong={handlePlaySong}
         selectedIndex={selectedIndex} 
         setSelectedIndex={setSelectedIndex}  
+        onItemClick={(sceneIndex, itemTitle) => openModalAndScroll(sceneIndex, itemTitle)}
       />
       
       <Footer />
